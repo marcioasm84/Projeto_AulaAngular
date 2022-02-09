@@ -1,0 +1,25 @@
+<form (ngSubmit)="transferir()">
+
+<div class="card col-4">        
+    <div class="card-body">
+        
+        <h5>Nova Transferência</h5>        
+
+        <div class="form-group mt-3">
+            <label>Valor</label>
+            <input class="form-control" type="number" name="valor" [(ngModel)]="valor">
+        </div>
+        
+        <div class="form-group mt-3">
+            <label>Destino</label>
+            <input class="form-control" type="text" name="destino" [(ngModel)]="destino">
+        </div>
+
+        <div class="form-group mt-4">
+            <button class="btn btn-primary form-control" >Transferir</button>
+        </div>
+        
+    </div>
+</div>
+
+</form>

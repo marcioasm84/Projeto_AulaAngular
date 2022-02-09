@@ -1,0 +1,31 @@
+<div class="card col-6 ">        
+    <div class="card-body">
+        
+        <h5>Extrato</h5>        
+
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Destino</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="listaTransferencias?.length; else listaVazia">
+                <tr *ngFor="let transferencia of listaTransferencias">
+                    <td>{{ transferencia.data | date: "short" }}</td>
+                    <td>{{ transferencia.valor | currency }}</td>
+                    <td>{{ transferencia.destino }}</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <ng-template #listaVazia>
+            <p>Lista vazia</p>
+        </ng-template>
+        
+    </div>
+
+</div>
